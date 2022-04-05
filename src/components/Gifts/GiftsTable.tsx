@@ -1,5 +1,5 @@
 import React from 'react';
-import {GiftEntity} from "../../types/gifts";
+import {GiftEntity} from 'types';
 import {GiftsTableRow} from "./GiftTableRow";
 
 interface Props {
