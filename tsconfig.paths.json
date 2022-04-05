@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "types": [
-        "../lista-swietego-mikolaja/types"
+        "../../lista-swietego-mikolaja/types"
       ]
     }
   }
