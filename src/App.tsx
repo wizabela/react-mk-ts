@@ -12,7 +12,7 @@ export const App = () => {
           <Header/>
           <Routes>
               <Route path="/gift" element={<GiftsView/>}/>
-              <Route path="/test" element={<TestView/>}/>
+              <Route path="/test/:something" element={<TestView/>}/>
               <Route path="*" element={<NotFoundView/>}/>
           </Routes>
       </>
