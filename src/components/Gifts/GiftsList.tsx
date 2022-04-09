@@ -11,12 +11,11 @@ export const GiftsList = () => {
         const res = await fetch('http://localhost:3001/gift');
         const data = await res.json();
         setGiftsList(data.giftsList);
-
     };
 
     useEffect(() => {
         refreshGifts();
-    }, [])
+    }, []);
 
 
     if (giftsList === null) {
@@ -27,5 +26,4 @@ export const GiftsList = () => {
         <h1>Gifts</h1>
         <GiftsTable gifts={giftsList} onGiftsChange={refreshGifts}/>
     </>;
-
 };
