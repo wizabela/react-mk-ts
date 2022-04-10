@@ -20,6 +20,7 @@ export const GiftsList = () => {
 
     if (giftsList === null) {
         return <Spinner/>;
+        // return null;
     }
 
     return <>

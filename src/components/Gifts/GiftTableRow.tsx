@@ -1,5 +1,6 @@
 import React, {MouseEvent} from 'react';
 import {GiftEntity} from 'types';
+import {Link} from "react-router-dom";
 
 interface Props {
     gift: GiftEntity,
@@ -23,18 +24,21 @@ export const GiftTableRow = (props: Props) => {
           alert(`Error occurred: ${error.message}`);
           return;
       }
-      //jak nie ma błędu tyo odśwież tabelę:
+        //jak nie ma błędu to odśwież tabelę:
         props.onGiftsChange();
     };
 
     return (
-    <tr>
-        <th>{props.gift.id}</th>
-        <td>{props.gift.name}</td>
-        <td>{props.gift.count}</td>
-        <td>
-            <a href="#" onClick={deleteGift}>🗑</a>
-        </td>
-    </tr>
+        <tr>
+            <th>
+                <Link to={`/gift/${props.gift.id}`}>
+                    {props.gift.name}
+                </Link>
+            </th>
+            <td>{props.gift.count}</td>
+            <td>
+                <a href="#" onClick={deleteGift}>🗑</a>
+            </td>
+        </tr>
     );
 };
