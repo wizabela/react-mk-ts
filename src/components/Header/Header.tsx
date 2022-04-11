@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export const Header = () => (
   <>
       <h1>Santa app</h1>
-      Menu: <Link to="/gift">Gifts</Link> | <Link to="/test">Test</Link>
+      Menu: <Link to="/gift">Gifts</Link> | <Link to="/child">Children</Link>
       <hr/>
   </>
 );
